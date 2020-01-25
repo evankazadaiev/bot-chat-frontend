@@ -5,7 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "unit": "vue-cli-service unit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint && git add ."
+    }
   },
   "dependencies": {
     "core-js": "^3.4.4",
