@@ -6,7 +6,7 @@
       </div>
       <div class="textarea-count-wrap">
         <div class="checkbox-wrap">
-          <label @click="sendMessage"><span>Press Enter to send</span></label>
+          <button @click="sendMessage">Press Enter to send</button>
         </div>
       </div>
     </form>
@@ -21,22 +21,30 @@ export default {
   }),
   methods: {
     sendMessage() {
-      const timestamp = new Date().toUTCString();
-      const message = {
-        message: this.text,
-        timestamp,
-        isBot: false,
-      };
-      const { roomId } = this.$route.params;
-      // const roomId = 'ivan';
-      this.$emit('onSendMessage', message);
-      this.$socket.client.emit('message', { roomId, message });
-      this.text = '';
+      if (this.text.length > 4) {
+        const timestamp = new Date().toUTCString();
+        const message = {
+          message: this.text,
+          timestamp,
+          isBot: false,
+        };
+        const { roomId } = this.$route.params;
+        // const roomId = 'ivan';
+        this.$emit('onSendMessage', message);
+        this.$socket.client.emit('message', { roomId, message });
+        this.text = '';
+      }
     },
   },
 };
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .textarea-count-wrap {
+    button {
+      outline: 0;
+      border: 0;
+      background: transparent;
+    }
+  }
 </style>

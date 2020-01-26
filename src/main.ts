@@ -7,7 +7,7 @@ import store from './store';
 import '@/assets/styles/index.scss';
 
 
-const socket = io('http://localhost:3000/bot-chat');
+const socket = io(process.env.VUE_APP_BOT_CHAT_URL);
 
 Vue.use(VueSocketIOExt, socket);
 

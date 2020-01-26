@@ -22,7 +22,8 @@ import Component from 'vue-class-component';
 })
 export default class Message extends Vue {
   get messageTime() {
-    const fullDate = new Date(this.message.timestamp);
+    const { timestamp } = this.message;
+    const fullDate = timestamp._seconds ? new Date(timestamp._seconds) : new Date(timestamp);
     let hours = fullDate.getHours();
     let minutes = fullDate.getMinutes();
     const amOrPm = hours >= 12 ? 'pm' : 'am';
