@@ -1,12 +1,12 @@
 <template>
-  <ChatContainer>
+  <chat-container>
     <template v-slot:sidebar>
-      <ContactsSidebar/>
+      <contacts-sidebar/>
     </template>
     <template v-slot:messages>
       <router-view></router-view>
     </template>
-  </ChatContainer>
+  </chat-container>
 </template>
 
 <script>

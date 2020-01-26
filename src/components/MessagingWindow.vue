@@ -11,13 +11,13 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Socket } from 'vue-socket.io-extended';
 
-const Message = () => import('@/components/Message/');
-const ChatInput = () => import('@/components/ChatInput/');
+const Message = () => import('./Message');
+const ChatInput = () => import('./ChatInput');
 
 @Component({
   name: 'MessagingWindow',
