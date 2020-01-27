@@ -3,6 +3,19 @@
     <router-view/>
   </div>
 </template>
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component({
+  name: 'App',
+})
+export default class App extends Vue {
+  beforeDestroy() {
+    this.$socket.client.emit('disconnect');
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

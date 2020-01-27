@@ -10,7 +10,7 @@
 </template>
 
 <script>
-const ChatContainer = () => import('../components/ChatContainer');
+const ChatContainer = () => import('../components/ChatContainer/ChatContainer');
 const ContactsSidebar = () => import('../components/ContactsSidebar');
 
 export default {

@@ -1,19 +1,19 @@
 <template>
   <div class="contacts-wrap">
     <div class="contact">
-      <a class="contact_link" v-for="room in rooms" :key="room" @click="joinRoom(room)">
+      <button class="contact_link" v-for="room in rooms" :key="room" @click="joinRoom(room)">
         <ContactUser :bot-id="room"/>
-      </a>
+      </button>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Socket } from 'vue-socket.io-extended';
 
-const ContactUser = () => import('@/components/ContactUser/');
+const ContactUser = () => import('../ContactUser/index.vue');
 
 @Component({
   name: 'ContactsSidebar',
@@ -22,16 +22,16 @@ const ContactUser = () => import('@/components/ContactUser/');
   },
 })
 export default class ContactsSidebar extends Vue {
-  rooms = [];
+  rooms: string[] = [];
 
-  currentRoom = null;
+  currentRoom = '';
 
 
   created() {
     this.$socket.client.emit('rooms');
   }
 
-  joinRoom(roomId) {
+  joinRoom(roomId: string) {
     if (this.currentRoom) {
       this.$socket.client.emit('leave', this.currentRoom);
       this.$socket.client.removeAllListeners();
@@ -42,7 +42,7 @@ export default class ContactsSidebar extends Vue {
   }
 
   @Socket('rooms')
-  onRooms(rooms) {
+  onRooms(rooms: string[]) {
     this.rooms = rooms;
     this.$socket.client.emit('join_room', this.rooms[0]);
     this.$router.push({ path: `/chat/${this.rooms[0]}` });
@@ -51,4 +51,11 @@ export default class ContactsSidebar extends Vue {
 </script>
 
 <style lang="scss" scoped>
+  .contact_link {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 0;
+    outline: 0;
+  }
 </style>

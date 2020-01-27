@@ -13,25 +13,22 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ContactUser',
-  data: () => ({
-    rooms: [],
-  }),
-  props: {
-    botId: {
-      type: String,
-      required: true,
-      default: '',
-    },
-  },
-  computed: {
-    isActive() {
-      return this.$route.params.roomId === this.botId;
-    },
-  },
-};
+<script lang="ts">
+import { Component, Vue, Prop } from 'vue-property-decorator';
+
+  @Component({
+    name: 'ContactUser',
+  })
+
+export default class ContactUser extends Vue {
+  @Prop({ required: true })
+  botId!: string;
+
+
+  get isActive() {
+    return this.$route.params.roomId === this.botId;
+  }
+}
 </script>
 
 <style scoped>

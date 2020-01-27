@@ -12,13 +12,14 @@ const routes = [
       {
         path: '/chat/:roomId',
         name: 'ChatMessagesWindow',
-        component: () => import('@/components/MessagingWindow.vue'),
+        component: () => import('@/components/MessagingWindow/MessagingWindow.vue'),
       },
     ],
   },
 ];
 
 const router = new VueRouter({
+  mode: 'history',
   routes,
 });
 

@@ -14,11 +14,11 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
-const Label = () => import('@/components/Label');
+const Label = () => import('../Label/Label.vue');
 
 @Component({
   name: 'ChatContainer',
