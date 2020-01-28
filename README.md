@@ -7,7 +7,6 @@
 
 ## Technologies/frameworks used:
 
-1. [Init git flow for project](./GITHOOKS.md)
 1. [Vue](https://vuejs.org/) JS framework.
 1. [Typescript](https://www.typescriptlang.org/)
 1. [Vue Cli](https://cli.vuejs.org/) Command line tools v4.
