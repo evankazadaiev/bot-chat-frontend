@@ -1,12 +1,19 @@
 const express = require('express');
-const serveStatic = require('serve-static');
-const path = require('path');
+const history = require('connect-history-api-fallback');
 
 const app = express();
 
-app.use('/', serveStatic(path.join(__dirname, '/dist')));
 
+const staticFileMiddleware = express.static('dist');
+
+app.use(staticFileMiddleware);
+
+app.use(history({
+  index: '/dist/index.html',
+}));
+
+app.use(staticFileMiddleware);
 const port = process.env.PORT || 8080;
-app.listen(port);
-
-console.log(`listening on port: ${port}`);
+app.listen(port, () => {
+  console.log(`listening on port: ${port}`);
+});
