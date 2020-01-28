@@ -17,6 +17,7 @@ The instructions below will help you set up the development environment.
 1. Clone the repository `git clone https://github.com/evankazadaiev/bot-chat-frontend.git`
 1. `cd bot-chat-frontend`
 1. `yarn install` to install the dependencies.
+1. Before starting the development server, make sure you have started a backend local server. You can see instructions for setting up backend by going to [Bot chat backend repository](https://github.com/evankazadaiev/bot-chat-backend)
 1. `yarn serve` to compile and hot-reload for development.
 1. Visit `http://localhost:8080/` and start developing.
 
