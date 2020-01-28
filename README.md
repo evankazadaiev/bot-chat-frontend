@@ -1,5 +1,11 @@
 # Bot chat front-end
 
+# Demo
+## Note. Make sure you have started back-end server first.
+
+1. [Front-end demo](https://vuejs-bot-chat-app-live.herokuapp.com/).
+2. [Back-end server](https://vuejs-bot-chat-backend.herokuapp.com/).
+
 ## Technologies/frameworks used:
 
 1. [Init git flow for project](./GITHOOKS.md)
