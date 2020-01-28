@@ -1,7 +1,6 @@
 # Bot chat front-end
 
-# Demo
-## Note. Make sure you have started back-end server first.
+## Demo. Make sure you have started back-end server first.
 
 1. [Front-end demo](https://vuejs-bot-chat-app-live.herokuapp.com/).
 2. [Back-end server](https://vuejs-bot-chat-backend.herokuapp.com/).
