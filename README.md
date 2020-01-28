@@ -4,12 +4,11 @@
 
 1. [Init git flow for project](./GITHOOKS.md)
 1. [Vue](https://vuejs.org/) JS framework.
+1. [Typescript](https://www.typescriptlang.org/)
 1. [Vue Cli](https://cli.vuejs.org/) Command line tools v4.
 1. [Yarn](https://yarnpkg.com/en/) Package manager.
-1. [Vuetify](https://vuetifyjs.com/en/) UI Framework for Material Design.
 1. [prettier](https://prettier.io/) For keeping code pretty!
 1. [ESLint]() Linting.
-1. [commit-lint](https://marionebl.github.io/commitlint/#/) Standard commit messages.
 
 The instructions below will help you set up the development environment.
 
