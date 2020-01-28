@@ -10,6 +10,7 @@
 1. [Vue](https://vuejs.org/) JS framework.
 1. [Typescript](https://www.typescriptlang.org/)
 1. [Vue Cli](https://cli.vuejs.org/) Command line tools v4.
+1. [Husky](https://github.com/typicode/husky) Pre-commit & pre-push tool.
 1. [Yarn](https://yarnpkg.com/en/) Package manager.
 1. [ESLint]() Linting.
 
